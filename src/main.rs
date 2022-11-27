@@ -1,7 +1,33 @@
 fn main() {
-    let int_u8: u8 = 10;
-    let int2_u8: u8 = 30;
+    enum Days {
+        Mon,
+        Tue,
+        Wed,
+        Thu,
+        Fri,
+        Sat,
+        Sun,
+    }
 
-    let int3_u32: u32 = (int_u8 as u32) + (int2_u8 as u32);
-    println!("{}", int3_u32);
+    impl Days {
+        fn is_weekend(&self) -> bool {
+            match self {
+                Days::Sat | Days::Sun => true,
+                _ => false,
+            }
+        }
+    }
+
+    let today: Days = Days::Mon;
+    match today {
+        Days::Mon => println!("Everybody hate Mon."),
+        Days::Tue => println!("Donut day."),
+        Days::Wed => println!("Hump day."),
+        Days::Thu => println!("Pay day."),
+        Days::Fri => println!("Almost weekend."),
+        Days::Sat => println!("Weekend."),
+        Days::Sun => println!("Weekend."),
+    }
+
+    println!("Is today is weekend {}", today.is_weekend());
 }
