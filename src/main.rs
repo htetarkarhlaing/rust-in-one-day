@@ -2,10 +2,10 @@
 // use rand::Rng;
 
 fn main() {
-    const ONE_MILE: u32 = 1_000_000;
-    // const PI: f32 = 3.141592;
-    let age = "21";
-    let age: u32 = age.parse().expect("Age was not assigned a number.");
-    // age = age + 1;
-    println!("I'm {} years old and I went {} miles.", age, ONE_MILE);
+   println!("U8 max size {}", u8::MAX);
+   println!("U16 max size {}", u16::MAX);
+   println!("U32 max size {}", u32::MAX);
+   println!("U64 max size {}", u64::MAX);
+   println!("U128 max size {}", u128::MAX);
+   println!("USize max size {}", usize::MAX);
 }
