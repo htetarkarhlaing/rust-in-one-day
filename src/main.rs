@@ -1,22 +1,16 @@
+fn say_hello() {
+    println!("Hello World");
+}
+
+fn get_sum(x: u32, y: u32) {
+    println!("{} + {} = {}", x, y, x + y)
+}
+
+fn get_sum_value(x: i32, y: i32) -> i32 {
+    x + y
+}
 fn main() {
-    let vec_one: Vec<i32> = Vec::new();
-    let mut vec_two = vec![1, 2, 3, 4, 5];
-    vec_two.push(6);
-    println!("1st : {}", vec_two[0]);
-    let second: &i32 = &vec_two[1];
-    match vec_two.get(1) {
-        Some(second) => println!("2nd is : {}", second),
-        None => println!("No 2nd value"),
-    };
-
-    for i in &mut vec_two {
-        *i *= 2;
-    };
-
-    for i in &vec_two {
-        println!("{}", i);
-    };
-
-    println!("Vec length, {}", vec_two.len());
-    println!("Pop: {:?}", vec_two.pop());
+    say_hello();
+    get_sum(5, 6);
+    println!("{}", get_sum_value(5, 6));
 }
