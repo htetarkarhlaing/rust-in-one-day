@@ -1,13 +1,14 @@
 // use std::io;
-// use rand::Rng;
+use rand::Rng;
 
 fn main() {
-   let num_one: u32 = 5;
-   let num_two: u32 = 4;
-
-   println!("{} + {} = {}.", num_one, num_two, num_one + num_two);
-   println!("{} - {} = {}.", num_one, num_two, num_one - num_two);
-   println!("{} * {} = {}.", num_one, num_two, num_one * num_two);
-   println!("{} / {} = {}.", num_one, num_two, num_one / num_two);
-   println!("{} % {} = {}.", num_one, num_two, num_one % num_two);
+    let age = rand::thread_rng().gen_range(1..101);
+    if(age >= 1) && (age <= 18) {
+        println!("Important birthday.")
+    }else if (age == 20) || (age == 50) {
+        println!("Also important.")
+    }
+    else {
+         println!("Unimportant")
+    }
 }
