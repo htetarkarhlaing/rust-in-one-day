@@ -1,33 +1,22 @@
 fn main() {
-    enum Days {
-        Mon,
-        Tue,
-        Wed,
-        Thu,
-        Fri,
-        Sat,
-        Sun,
-    }
+    let vec_one: Vec<i32> = Vec::new();
+    let mut vec_two = vec![1, 2, 3, 4, 5];
+    vec_two.push(6);
+    println!("1st : {}", vec_two[0]);
+    let second: &i32 = &vec_two[1];
+    match vec_two.get(1) {
+        Some(second) => println!("2nd is : {}", second),
+        None => println!("No 2nd value"),
+    };
 
-    impl Days {
-        fn is_weekend(&self) -> bool {
-            match self {
-                Days::Sat | Days::Sun => true,
-                _ => false,
-            }
-        }
-    }
+    for i in &mut vec_two {
+        *i *= 2;
+    };
 
-    let today: Days = Days::Mon;
-    match today {
-        Days::Mon => println!("Everybody hate Mon."),
-        Days::Tue => println!("Donut day."),
-        Days::Wed => println!("Hump day."),
-        Days::Thu => println!("Pay day."),
-        Days::Fri => println!("Almost weekend."),
-        Days::Sat => println!("Weekend."),
-        Days::Sun => println!("Weekend."),
-    }
+    for i in &vec_two {
+        println!("{}", i);
+    };
 
-    println!("Is today is weekend {}", today.is_weekend());
+    println!("Vec length, {}", vec_two.len());
+    println!("Pop: {:?}", vec_two.pop());
 }
