@@ -2,13 +2,8 @@
 // use rand::Rng;
 
 fn main() {
-   println!("U8 max size {}", u8::MAX);
-   println!("U16 max size {}", u16::MAX);
-   println!("U32 max size {}", u32::MAX);
-   println!("U64 max size {}", u64::MAX);
-   println!("U128 max size {}", u128::MAX);
-   println!("USize max size {}", usize::MAX);
-
-   println!("F32 max size {}", f32::MAX);
-   println!("F64 max size {}", f64::MAX);
+    let num_1: f32 = 1.11111111111;
+    println!("f32 {}", num_1 + 0.11111111111);
+    let num_1: f64 = 1.11111111111;
+    println!("f32 {}", num_1 + 0.11111111111);
 }
