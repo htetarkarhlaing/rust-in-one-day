@@ -1,13 +1,13 @@
 // use std::io;
-// use rand::Rng;
-// use std::cmp::Ordering;
+use rand::Rng;
+use std::cmp::Ordering;
 
 fn main() {
-    let age = 8;
-    match age {
-        1..=18 => println!("Important birthday."),
-        22 | 50 => println!("Importnat birthday."),
-        65..=u32::MAX => println!("Important birthday"),
-        _ => println!("Not important birthday."),
-    };
+    let age = rand::thread_rng().gen_range(1..101);
+    let voteing_age = 18;
+    match age.cmp(& voteing_age) {
+        Ordering::Less => println!("You can't vote."),
+        Ordering::Greater => println!("You can vote."),
+        Ordering::Equal => println!("Congratulation."),
+    }
 }
