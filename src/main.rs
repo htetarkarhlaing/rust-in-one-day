@@ -17,4 +17,10 @@ fn main() {
         println!("Val : {}", arr[loop_index]);
         loop_index += 1;
     }
+
+    // while loop
+    while loop_index < arr.len() {
+        println!("Arr : {}", arr[loop_index]);
+        loop_index += 1;
+    }
 }
