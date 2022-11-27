@@ -1,8 +1,13 @@
 // use std::io;
 // use rand::Rng;
+// use std::cmp::Ordering;
 
 fn main() {
-    let my_age = 21;
-    let can_vote = if my_age >= 18 { true } else { false };
-    println!("can vote = {}", can_vote);
+    let age = 8;
+    match age {
+        1..=18 => println!("Important birthday."),
+        22 | 50 => println!("Importnat birthday."),
+        65..=u32::MAX => println!("Important birthday"),
+        _ => println!("Not important birthday."),
+    };
 }
