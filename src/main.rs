@@ -1,10 +1,11 @@
-use std::io;
+// use std::io;
 // use rand::Rng;
 
 fn main() {
-    println!("What is your name?");
-    let mut name = String::new();
-    let greeting = "Nice to meet you.";
-    io::stdin().read_line(&mut name).expect("Didn't received input.");
-    println!("Hello {}! {}", name.trim_end(), greeting);
+    const ONE_MILE: u32 = 1_000_000;
+    // const PI: f32 = 3.141592;
+    let age = "21";
+    let age: u32 = age.parse().expect("Age was not assigned a number.");
+    // age = age + 1;
+    println!("I'm {} years old and I went {} miles.", age, ONE_MILE);
 }
