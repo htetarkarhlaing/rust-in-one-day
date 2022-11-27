@@ -1,13 +1,20 @@
 // use std::io;
-use rand::Rng;
-use std::cmp::Ordering;
+// use rand::Rng;
+// use std::cmp::Ordering;
 
 fn main() {
-    let age = rand::thread_rng().gen_range(1..101);
-    let voteing_age = 18;
-    match age.cmp(& voteing_age) {
-        Ordering::Less => println!("You can't vote."),
-        Ordering::Greater => println!("You can vote."),
-        Ordering::Equal => println!("Congratulation."),
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let mut loop_index = 0;
+
+    loop {
+        if arr[loop_index] % 2 == 0 {
+            loop_index += 1;
+            continue;
+        }
+        if arr[loop_index] == 9 {
+            break;
+        }
+        println!("Val : {}", arr[loop_index]);
+        loop_index += 1;
     }
 }
