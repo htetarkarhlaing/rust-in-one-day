@@ -2,8 +2,12 @@
 // use rand::Rng;
 
 fn main() {
-    let num_1: f32 = 1.11111111111;
-    println!("f32 {}", num_1 + 0.11111111111);
-    let num_1: f64 = 1.11111111111;
-    println!("f32 {}", num_1 + 0.11111111111);
+   let num_one: u32 = 5;
+   let num_two: u32 = 4;
+
+   println!("{} + {} = {}.", num_one, num_two, num_one + num_two);
+   println!("{} - {} = {}.", num_one, num_two, num_one - num_two);
+   println!("{} * {} = {}.", num_one, num_two, num_one * num_two);
+   println!("{} / {} = {}.", num_one, num_two, num_one / num_two);
+   println!("{} % {} = {}.", num_one, num_two, num_one % num_two);
 }
