@@ -8,4 +8,7 @@ fn main() {
    println!("U64 max size {}", u64::MAX);
    println!("U128 max size {}", u128::MAX);
    println!("USize max size {}", usize::MAX);
+
+   println!("F32 max size {}", f32::MAX);
+   println!("F64 max size {}", f64::MAX);
 }
